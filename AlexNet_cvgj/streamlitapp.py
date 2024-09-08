@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the model
-model = tf.keras.models.load_model('my_model.keras', compile=False)
+model = tf.keras.models.load_model('vgg19_model.h5')
 
 
 def display_model_analysis():
