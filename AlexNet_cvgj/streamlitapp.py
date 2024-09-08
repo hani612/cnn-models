@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+import caffe
 
 model = tf.keras.models.load_model('my_model.keras')
 def display_model_analysis():
