@@ -17,12 +17,15 @@ def display_model_analysis():
 
 # Call the function to display the model analysis
 display_model_analysis()
-    # Example: Display model architecture
-    tf.keras.utils.plot_model(model, to_file='model.png', show_shapes=True)
-    st.image('model.png')
+
+# Example: Display model architecture
+tf.keras.utils.plot_model(model, to_file='model.png', show_shapes=True)
+st.image('model.png')
+
 def make_prediction(input_data):
     prediction = model.predict(input_data)
     return prediction
+
 st.title('CNN Model Analysis and Prediction')
 
 st.header('Model Analysis')
