@@ -2,12 +2,21 @@ import streamlit as st
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
-import caffe
 
+# Load the model
 model = tf.keras.models.load_model('my_model.keras')
+
 def display_model_analysis():
-    # Example: Display model summary
-    st.text(model.summary())
+    # Capture the model summary
+    summary = []
+    model.summary(print_fn=lambda x: summary.append(x))
+    summary_str = "\n".join(summary)
+    
+    # Display the model summary in Streamlit
+    st.text(summary_str)
+
+# Call the function to display the model analysis
+display_model_analysis()
     # Example: Display model architecture
     tf.keras.utils.plot_model(model, to_file='model.png', show_shapes=True)
     st.image('model.png')
