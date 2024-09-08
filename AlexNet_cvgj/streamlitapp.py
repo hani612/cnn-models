@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the model
-model = tf.keras.models.load_model('my_model.keras')
+model = tf.keras.models.load_model('my_model.keras', compile=False)
+
 
 def display_model_analysis():
     # Capture the model summary
